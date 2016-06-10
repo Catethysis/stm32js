@@ -1,4 +1,4 @@
-const uart = require('../peripheral/uart.js');
+const uart = require('../peripheral/uart');
 
 var FT232 = new uart(2, 115200, {split: '\n'});
 FT232.send([0x61, 0x62, 0x63, 0x64, 0x65, 0x31]);

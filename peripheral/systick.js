@@ -1,10 +1,14 @@
 const events = require('events');
 
-SysTick = function(milliseconds) {
+var systick = function(milliseconds) {
+	events.EventEmitter.call(this);
 	__C_SysTick_init(milliseconds);
-	return new events.EventEmitter();
 };
 
-SysTick_irq = function() {
-	SysTick.emit('tick');
+systick.prototype = Object.create(events.EventEmitter.prototype);
+
+var systick_irq = function() {
+	systick.emit('tick');
 };
+
+module.exports = systick;

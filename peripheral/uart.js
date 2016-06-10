@@ -1,6 +1,7 @@
 const events = require('events');
 
-uart = function(module, params, parser) {
+var uart = function(module, params, parser) {
+	events.EventEmitter.call(this);
 	var baudrate = 9600, byte_bits = 8, parity = 'N' /* N (no), O (odd), E (even), M (mark), S (space) */, stop_bits = 1;
 	switch(typeof params) {
 		case "number":
@@ -33,6 +34,8 @@ uart.prototype.send = function(data) {
 	__C_UART_Send(2, new Uint8Array(data), data.length, this.split);
 }
 
-uart_data_irq = function(data) {
+var uart_data_irq = function(data) {
 	uart.emit('data', data);
 }
+
+module.exports = uart;

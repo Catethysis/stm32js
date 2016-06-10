@@ -1,4 +1,4 @@
-const SysTick = require('../peripheral/systick.js');
+const SysTick = require('../peripheral/systick');
 
 var sysTick = new SysTick(500);
 
