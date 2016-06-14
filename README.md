@@ -25,7 +25,7 @@ It consists of many parts:
 
 ## Examples
 
-stm32js is very easy to use for those who know JS, I'll show you some particular framework use cases.
+`stm32js` is very easy to use for those who know JS, so I'll show you some particular framework use cases.
 
 ### SysTick
 
