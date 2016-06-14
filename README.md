@@ -9,7 +9,7 @@ In other words, now you can program your STM32F4Discovery using JS, and ready-to
 
 ## What's underneath
 
-`stm32js` lying between web technologies and embedded development, and trying to get the best from two worlds.
+`stm32js` lying in between web technologies and embedded development, and trying to get the best from two worlds.
 It consists of many parts:
 
 1. [Duktape](https://github.com/svaarala/duktape), the light-weight JS engine with small runtime/context memory footprint
