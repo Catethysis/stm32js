@@ -33,6 +33,7 @@ var sysTick = new SysTick(500);
 
 sysTick.on('tick', () => {
 	print('tick');
-});```
+});
+```
 
 `print()` function will output its argument to SWO so you can see it in "Terminal I/O" window in IAR or appropriate tool in other IDE or ST-Link Utility.
