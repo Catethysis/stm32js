@@ -5,11 +5,13 @@
 ## About it
 
 `stm32js` provides a hardware abstraction layer (HAL) to common STM32F4 peripheral in a set of two-way C++ ↔ JS bindings.
+
 In other words, now you can program your STM32F4Discovery using JS, and ready-to-use libraries is also available.
 
 ## What's underneath
 
 `stm32js` lying in between web technologies and embedded development, and trying to get the best from two worlds.
+
 It consists of many parts:
 
 1. [Duktape](https://github.com/svaarala/duktape), the light-weight JS engine with small runtime/context memory footprint
