@@ -25,6 +25,10 @@ It consists of many parts:
 
 ## Examples
 
+stm32js is very easy to use for those who know JS, I'll show you some particular framework use cases.
+
+### SysTick
+
 For example, let's ask the system timer to tick every 0.5 seconds. Didn`t you forget about ES6 support? You can use arrow functions in here.
 ```javascript
 const SysTick = require('../peripheral/systick');
