@@ -22,3 +22,17 @@ It consists of many parts:
 6. [GCC/Make](https://launchpad.net/gcc-arm-embedded) that builds the Core
 7. [CMSIS](http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php) proudly provided by ARM and STM32, that gives all peripheral descriptions
 8. Custom HAL libraries to access the STM32 hardware, such as init functions and common calls.
+
+## Examples
+
+For example, let`s ask the system timer to tick every 0.5 seconds. Didn`t you forget about ES6 support? You can use arrow functions in here.
+```javascript
+const SysTick = require('../peripheral/systick');
+
+var sysTick = new SysTick(500);
+
+sysTick.on('tick', () => {
+	print('tick');
+});```
+
+`print()` function will output its argument to SWO so you can see it in "Terminal I/O" window in IAR or appropriate tool in other IDE or ST-Link Utility.
