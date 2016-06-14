@@ -25,7 +25,7 @@ It consists of many parts:
 
 ## Examples
 
-For example, let`s ask the system timer to tick every 0.5 seconds. Didn`t you forget about ES6 support? You can use arrow functions in here.
+For example, let's ask the system timer to tick every 0.5 seconds. Didn`t you forget about ES6 support? You can use arrow functions in here.
 ```javascript
 const SysTick = require('../peripheral/systick');
 
