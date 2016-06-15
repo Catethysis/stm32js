@@ -21,7 +21,7 @@ var uart = function(module, params, parser) {
 			stop_bits  =  params[3];
 			break;
 	}
-	if(parser);
+	// if(parser);
 	this.split = parser.split.charCodeAt(0);
 	__C_UART_Init(module, baudrate, byte_bits, parity.charCodeAt(0), stop_bits, this.split);
 }
@@ -29,8 +29,8 @@ var uart = function(module, params, parser) {
 uart.prototype = Object.create(events.EventEmitter.prototype);
 
 uart.prototype.send = function(data) {
-	if(typeof data == 'string') data = data.split('');
-	data = data.map(function(elem) { return typeof elem == 'string' ? elem.charCodeAt(0) : elem});
+	if(typeof data === 'string') data = data.split('');
+	data = data.map(function(elem) { return typeof elem === 'string' ? elem.charCodeAt(0) : elem});
 	__C_UART_Send(2, new Uint8Array(data), data.length, this.split);
 }
 
