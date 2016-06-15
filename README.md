@@ -12,12 +12,12 @@ In other words, now you can program your STM32F4Discovery using JS, and ready-to
 
 ## What's underneath
 
-`stm32js` lying in between web technologies and embedded development, and trying to get the best from two worlds.
+`stm32js` is lying in between web technologies and embedded development, and trying to get the best from two worlds.
 
-It consists of many parts:
+It consists of several parts:
 
 1. [Duktape](https://github.com/svaarala/duktape), the light-weight JS engine with small runtime/context memory footprint
-2. [Babel](https://github.com/babel/babel), an ES6->ES5 transpiler
+2. [Babel](https://github.com/babel/babel), an ES6 → ES5 transpiler
 3. [Browserify](https://github.com/substack/node-browserify), a RequireJS resolving tool
 4. [Uglify](https://github.com/terinjokes/gulp-uglify) to produce compact JS code
 5. [Gulp](https://github.com/gulpjs/gulp) to rule all the JS code processing
@@ -27,11 +27,11 @@ It consists of many parts:
 
 ## Examples
 
-`stm32js` is very easy to use for those who know JS, so I'll show you some particular framework use cases.
+`stm32js` is very easy to use for those who have an experience with JS, so I'll show you some particular framework use cases.
 
 ### SysTick
 
-For example, let's ask the system timer to tick every 0.5 seconds. Didn't you forget about ES6 support? You can use arrow functions in here.
+For example, let's ask the system timer to tick every 500 milliseconds. Didn't you forget about ES6 support? You can use arrow functions in here.
 ```javascript
 const SysTick = require('../peripheral/systick');
 
