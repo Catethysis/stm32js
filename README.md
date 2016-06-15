@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Catethysis/stm32js.svg?branch=master)](https://travis-ci.org/Catethysis/stm32js)
+[![Build Status](https://travis-ci.org/Catethysis/stm32js.svg?branch=master)](https://travis-ci.org/Catethysis/stm32js) [![Code Climate](https://codeclimate.com/github/Catethysis/stm32js/badges/gpa.svg)](https://codeclimate.com/github/Catethysis/stm32js)
 
 # stm32js
 
