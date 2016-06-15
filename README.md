@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Catethysis/stm32js.svg?branch=master)](https://travis-ci.org/Catethysis/stm32js)
+
 # stm32js
 
 `stm32js` is a framework which gives you a way to write scripts for STM32 in JavaScript.
