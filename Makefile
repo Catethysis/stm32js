@@ -23,9 +23,12 @@ $(OBJ)/main.o: $(EXAMPLES_DIR)/main.c
 $(OBJ)/duktape.o: $(DUKTAPE_DIR)/duktape.c
 	$(ARMGNU)-gcc $(COPS) $(CPU) $(COPTS) -c $(DUKTAPE_DIR)/duktape.c -o $(OBJ)/duktape.o
 
-$(BIN)/firmware.bin: $(STM32)/stm32_flash.ld $(OBJ)/startup_stm32f4xx.o $(OBJ)/main.o $(OBJ)/duktape.o
+$(OBJ)/systick.o: $(STM32)/systick.c
+	$(ARMGNU)-gcc $(COPS) $(CPU) $(COPTS) -c $(STM32)/systick.c -o $(OBJ)/systick.o
+
+$(BIN)/firmware.bin: $(STM32)/stm32_flash.ld $(OBJ)/startup_stm32f4xx.o $(OBJ)/main.o $(OBJ)/duktape.o $(OBJ)/systick.o
 	mkdir -p $(BIN)
-	$(ARMGNU)-gcc $(COPS) $(CPU) -T $(STM32)/stm32_flash.ld $(OBJ)/startup_stm32f4xx.o $(OBJ)/main.o $(OBJ)/duktape.o -o $(BIN)/firmware.elf
+	$(ARMGNU)-gcc $(COPS) $(CPU) -T $(STM32)/stm32_flash.ld $(OBJ)/startup_stm32f4xx.o $(OBJ)/main.o $(OBJ)/duktape.o $(OBJ)/systick.o -o $(BIN)/firmware.elf
 	$(ARMGNU)-objdump -D $(BIN)/firmware.elf > $(BIN)/firmware.list
 	$(ARMGNU)-objcopy $(BIN)/firmware.elf $(BIN)/firmware.bin -O binary
 
