@@ -1,4 +1,4 @@
-#include "duktape.h"
+#include "../third-party/duktape/duktape.h"
 
 uint32_t systick_divider = 0;
 
