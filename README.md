@@ -25,6 +25,9 @@ It consists of several parts:
 7. [CMSIS](http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php) proudly provided by ARM and STM32, that gives all peripheral descriptions
 8. Custom HAL libraries to access the STM32 hardware, such as init functions and common calls.
 
+## Build
+Currently you cannot build the framework through gcc, but I'm working on it. I provide binary image built on IAR now.
+
 ## Examples
 
 `stm32js` is very easy to use for those who have an experience with JS, so I'll show you some particular framework use cases.
